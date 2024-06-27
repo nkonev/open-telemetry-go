@@ -15,7 +15,7 @@ docker compose up -d --build
 Produce a trace:
 
 ```
-curl -X POST localhost:8081/api/checkout
+curl -i -X POST localhost:8081/api/checkout
 ```
 
 ## How does it look in Jaeger

@@ -71,6 +71,8 @@ func checkoutHandler(c pb.CheckoutClient) func(http.ResponseWriter, *http.Reques
 			return
 		}
 
+		w.Header().Set("X-TraceId", span.SpanContext().TraceID().String())
+
 		// Success
 		w.WriteHeader(http.StatusAccepted)
 	}
